@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://h86tr5q03tx7"]
+
+[ext_resource type="Texture2D" uid="uid://cjiw4t8denh4d" path="res://Items/item-splashingfish.png" id="1_8dth5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgvcj"]
+atlas = ExtResource("1_8dth5")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikvox"]
+atlas = ExtResource("1_8dth5")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfhdo"]
+atlas = ExtResource("1_8dth5")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6putu"]
+atlas = ExtResource("1_8dth5")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k1t2w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgvcj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikvox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfhdo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6putu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(66, 67)
+sprite_frames = SubResource("SpriteFrames_k1t2w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
