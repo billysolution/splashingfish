@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://csvd5ruwtseue"]
+
+[ext_resource type="Texture2D" uid="uid://78w6wfhk5jep" path="res://Man/splashingfishmodels.png" id="1_78ovf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdr8k"]
+atlas = ExtResource("1_78ovf")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87on0"]
+atlas = ExtResource("1_78ovf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jw8tt"]
+atlas = ExtResource("1_78ovf")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dwu6g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdr8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87on0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jw8tt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ManSprite" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_dwu6g")
+frame_progress = 0.216579

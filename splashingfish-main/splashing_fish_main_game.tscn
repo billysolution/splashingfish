@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ce7gqpmdsxjpd"]
+
+[ext_resource type="PackedScene" uid="uid://crananye6iqut" path="res://MapSprite.tscn" id="1_5w7gf"]
+[ext_resource type="Script" path="res://splashing_fish_main_game.gd" id="1_x5mo2"]
+[ext_resource type="PackedScene" uid="uid://csvd5ruwtseue" path="res://ManSprite.tscn" id="2_drxkq"]
+[ext_resource type="PackedScene" uid="uid://h86tr5q03tx7" path="res://ItemSprites.tscn" id="3_lh8m1"]
+
+[node name="SplashingFishMainGame" type="Node2D"]
+script = ExtResource("1_x5mo2")
+
+[node name="MapSprite" parent="." instance=ExtResource("1_5w7gf")]
+position = Vector2(544, 319.422)
+scale = Vector2(0.835937, 0.619965)
+
+[node name="ManSprite" parent="." instance=ExtResource("2_drxkq")]
+position = Vector2(732, 362)
+scale = Vector2(13.25, 12.5723)
+frame = 2
+frame_progress = 0.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+ignore_rotation = false
+
+[node name="ItemSprites" parent="." instance=ExtResource("3_lh8m1")]
+position = Vector2(829, 476)
+scale = Vector2(1.98828, 1.78981)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
